@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "911297498562",
+    "project_id": "fir-learning-5dd97",
+    "storage_bucket": "fir-learning-5dd97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911297498562:android:921ab2858994b803cd1a5b",
+        "android_client_info": {
+          "package_name": "com.flutterflow.edriveapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911297498562-d2ickk4qghv0e06ou21rfheso6ktf6dv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdeW9T1KU7yDVfjeJiL4myKpZj919tWEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911297498562-d2ickk4qghv0e06ou21rfheso6ktf6dv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "911297498562-48djpm3g9bmtnb0rh26ga877eev32bod.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.edriveapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
