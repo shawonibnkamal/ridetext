@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
 var con = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -39,15 +42,19 @@ const searchDrivers = async (phone, address) => {
                     if (err) throw err;
                 });
 
-
+                client.messages
+                .create({
+                   body: `${results[0].name} will reach you shortly in ${results[0].carmake} (${results[0].carlicense})! Estimated time: 3 minutes.`,
+                   from: '+19035012134',
+                   to: phone
+                 })
+                .then(message => console.log(message.sid));
 
             }
         });
         await sleep(2000);
     }
 }
-
-searchDrivers("+17091234567", "299 Elizabeth Ave");
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
