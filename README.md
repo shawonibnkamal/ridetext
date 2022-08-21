@@ -1,5 +1,7 @@
 # RideText
 
+![Logo](./logo.png)
+
 Backend server for RideText application.
 
 ## Development setup for node-server
